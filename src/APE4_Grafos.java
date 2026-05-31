@@ -39,14 +39,17 @@ public class APE4_Grafos {
 
         // ═══════════════════════════════════
         // TODO 1
-        // Agregar nodo al grafo
+        
         // ═══════════════════════════════════
         public void agregarNodo(String id, String nombre) {
 
-            // COMPLETE AQUÍ
+    // Crear y almacenar el nodo
+    nodos.put(id, new Nodo(id, nombre));
 
+    // Crear lista de adyacencia vacía
+    adyacencia.put(id, new ArrayList<>());
 
-        }
+}
 
         // ═══════════════════════════════════
         // TODO 2
