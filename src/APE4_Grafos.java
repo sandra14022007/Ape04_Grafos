@@ -83,7 +83,9 @@ public class APE4_Grafos {
             List<String> caminoInicial = new ArrayList<>();
 
             // TODO:
-            // Agregar nodo inicio al camino inicial
+            caminoInicial.add(inicio);
+            cola.add(caminoInicial);
+            visitados.add(inicio);
 
 
             // TODO:
