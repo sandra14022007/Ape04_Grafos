@@ -160,40 +160,49 @@ public class APE4_Grafos {
             }
 
             // TODO:
-            // Distancia del inicio = 0
+            // Distancia inicial
+    distancias.put(inicio, 0);
 
+    // Agregar inicio a la cola
+    cola.add(inicio);
 
-            // TODO:
-            // Agregar inicio a la cola
 
 
             while (!cola.isEmpty()) {
 
                 // TODO:
                 // Obtener nodo con menor distancia
-
+                String actual = cola.poll();
 
                 for (Arista arista : adyacencia.get(actual)) {
 
                     // TODO:
                     // Calcular nueva distancia
-
+                    int nuevaDistancia =
+                    distancias.get(actual) + arista.peso;
 
                     // TODO:
                     // Verificar si nuevaDistancia es menor
-
+                    if (nuevaDistancia <
+                    distancias.get(arista.destino)) {
 
                         // TODO:
                         // Actualizar distancia
-
+                        distancias.put(
+                        arista.destino,
+                        nuevaDistancia
+                );
 
                         // TODO:
                         // Guardar nodo anterior
-
+                        anteriores.put(
+                        arista.destino,
+                        actual
+                );
 
                         // TODO:
                         // Agregar vecino a la cola
-
+                        cola.add(arista.destino);
                     }
                 }
             }
