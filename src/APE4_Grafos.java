@@ -202,7 +202,7 @@ public class APE4_Grafos {
 
                         // TODO:
                         // Agregar vecino a la cola
-                        cola.add(arista.destino);
+                    
                     }
                 }
             }
