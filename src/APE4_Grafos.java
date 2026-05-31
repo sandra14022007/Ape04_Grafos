@@ -117,11 +117,11 @@ public class APE4_Grafos {
                                 new ArrayList<>(camino);
 
                         // TODO:
-                        // Agregar vecino al nuevo camino
+                         // Agregar vecino al camino
+                nuevoCamino.add(arista.destino);
 
-
-                        // TODO:
-                        // Agregar nuevoCamino a la cola
+                // Agregar nuevo camino a la cola
+                cola.add(nuevoCamino);
 
                     }
                 }
