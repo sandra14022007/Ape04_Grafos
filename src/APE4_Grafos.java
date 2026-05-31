@@ -153,7 +153,8 @@ public class APE4_Grafos {
             for (String nodo : nodos.keySet()) {
 
                 // TODO:
-                // Inicializar distancia infinita
+        // Distancia infinita
+        distancias.put(nodo, Integer.MAX_VALUE);
 
 
             }
