@@ -39,7 +39,6 @@ public class APE4_Grafos {
 
         // ═══════════════════════════════════
         // TODO 1
-        
         // ═══════════════════════════════════
         public void agregarNodo(String id, String nombre) {
 
@@ -57,10 +56,16 @@ public class APE4_Grafos {
         // ═══════════════════════════════════
         public void agregarArista(String origen, String destino, int peso) {
 
-            // COMPLETE AQUÍ
+    // Agregar conexión origen -> destino
+    adyacencia.get(origen)
+            .add(new Arista(destino, peso));
 
+    // Agregar conexión destino -> origen
+    // porque el grafo es no dirigido
+    adyacencia.get(destino)
+            .add(new Arista(origen, peso));
 
-        }
+}
 
         // ═══════════════════════════════════
         // TODO 3 — BFS
